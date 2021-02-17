@@ -1,0 +1,22 @@
+<h2>Interpolation </h2>
+
+<p>le nom de l'article est : {{nom_Article}}</p>
+<p>la taille de l'article est : {{taille_Article}}</p>
+<p>la couleur de l'article est : {{couleur_Article}}</p>
+
+<h2>Proprety Binding </h2>
+<p> le nom de l'article est : <span [innerHTML]="nom_Article" ></span></p> 
+<p> la taille de l'article est : <span [innerHTML]="taille_Article" ></span></p> 
+<p> la couleur de l'article est : <span [innerHTML]="couleur_Article" ></span></p>
+
+<h2>Event Binding</h2>
+
+<p > {{message}}</p>
+
+<button (click)="AchatArticle()">Achat Article</button>
+
+
+<h2>$event</h2>
+<h5> Veuillez saisir la catégorie des articles souhaité </h5>
+<input type="text" (input)="OnChoixCategorie($event)"/>
+Vous avez tapez : {{NomCategorie}}
