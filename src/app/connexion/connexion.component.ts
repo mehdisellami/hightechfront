@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnexionComponent implements OnInit {
 
+  errormessage:string =''
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  connexion(f:any){
+    let data=f.value;
+    console.log(data);
+
   }
 
 }

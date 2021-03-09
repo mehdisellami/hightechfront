@@ -20,3 +20,20 @@
 <h5> Veuillez saisir la catégorie des articles souhaité </h5>
 <input type="text" (input)="OnChoixCategorie($event)"/>
 Vous avez tapez : {{NomCategorie}}
+
+
+<div [class.my-class-couleur]="isColorChanged">
+Changez la couleur
+en cliquant sur le bouton.
+</div>
+<button class="btn btn-warning"
+(click) ="isColorChanged = !isColorChanged;">
+Modifier la Couleur </button>
+
+<p [style.font-size.em]="isFontChanged ? 2 : 1">
+    Changez le font</p>
+    
+    <button class="btn btn-danger "
+    (click)="isFontChanged = !isFontChanged;">
+    Modifier le style du font</button>
+    

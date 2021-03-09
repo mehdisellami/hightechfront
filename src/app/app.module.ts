@@ -13,7 +13,10 @@ import { PhonesModule } from './modules/phones/phones.module';
 import { TelephoneComponent } from './telephone/telephone.component';
 import { StockageComponent } from './stockage/stockage.component';
 import { HelloworldComponent } from './helloworld/helloworld.component';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PanierComponent } from './panier/panier.component';
+import { ProduitComponent } from './produit/produit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,11 +29,15 @@ import { HelloworldComponent } from './helloworld/helloworld.component';
     TelephoneComponent,
     StockageComponent,
     HelloworldComponent,
+    PanierComponent,
+    ProduitComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PhonesModule
+    PhonesModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

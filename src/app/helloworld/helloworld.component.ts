@@ -13,6 +13,8 @@ NomCategorie:String;
 couleur_Article : String ="Blue";
 message: String="Achat: pas encore effectué";
 confirmation: boolean= false;
+isColorChanged: boolean = false;
+isFontChanged: boolean = false;
 
   constructor() { }
 

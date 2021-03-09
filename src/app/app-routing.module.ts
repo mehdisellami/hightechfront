@@ -7,13 +7,17 @@ import { PcBureauComponent } from './pc-bureau/pc-bureau.component';
 import { PcPortableComponent } from './pc-portable/pc-portable.component';
 import {StockageModule} from './modules/stockage/stockage.module'
 import { HelloworldComponent } from './helloworld/helloworld.component';
+import { NoauthontificationGuardGuard } from './guards/noauthontification-guard.guard';
+import { ProduitComponent } from './produit/produit.component';
+import { PanierComponent } from './panier/panier.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent },
-{ path: 'PcPortable', component: PcPortableComponent },
-{ path: 'PcBureau', component: PcBureauComponent },
+{ path: 'PcPortable', component: PcPortableComponent  },
+{ path: 'PcBureau', component: PcBureauComponent  },
+{ path: 'panier', component: PanierComponent  },
 { path: 'PcAccessoires', component: PcAccessoiresComponent },
-{ path: 'Connexion', component: ConnexionComponent },
+{ path: 'Connexion', component: ConnexionComponent    },
 { path: 'helloworld', component: HelloworldComponent },
 { path: 'stockage', loadChildren :'./modules/stockage/stockage.module#StockageModule' }
 
