@@ -10,13 +10,19 @@ import { HomeComponent } from './home/home.component';
 import { PcAccessoiresComponent } from './pc-accessoires/pc-accessoires.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { PhonesModule } from './modules/phones/phones.module';
-import { TelephoneComponent } from './telephone/telephone.component';
 import { StockageComponent } from './stockage/stockage.component';
 import { HelloworldComponent } from './helloworld/helloworld.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PanierComponent } from './panier/panier.component';
 import { ProduitComponent } from './produit/produit.component';
+import { SmartphonesComponent } from './telephones/smartphones/smartphones.component';
+import { TelfixeComponent } from './telephones/telfixe/telfixe.component';
+import { TelaccessoiresComponent } from './telephones/telaccessoires/telaccessoires.component';
+import { DisquedurComponent } from './stockage/disquedur/disquedur.component';
+import { CleusbComponent } from './stockage/cleusb/cleusb.component';
+import { StockageAccessoiresComponent } from './stockage/stockage-accessoires/stockage-accessoires.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,11 +32,16 @@ import { ProduitComponent } from './produit/produit.component';
     HomeComponent,
     PcAccessoiresComponent,
     ConnexionComponent,
-    TelephoneComponent,
     StockageComponent,
     HelloworldComponent,
     PanierComponent,
     ProduitComponent,
+    SmartphonesComponent,
+    TelfixeComponent,
+    TelaccessoiresComponent,
+    DisquedurComponent,
+    CleusbComponent,
+    StockageAccessoiresComponent
   ],
   imports: [
     BrowserModule,
