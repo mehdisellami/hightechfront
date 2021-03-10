@@ -14,9 +14,9 @@
           required minlength="6" password />
         <div *ngIf="password.touched">
           <div class="alert alert-danger" *ngIf="username.touched">Entrez votre mot de passe</div>
-          <div class="alert alert-danger" *ngIf="password.minlength">Password must be at least 6 characters</div>
+          <div class="alert alert-danger" *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
         </div>
-      </div>
+      </div>  
       <div class="form-group">
         <button class="btn btn-primary">Login</button>
         <div *ngIf="f.submitted" class="alert alert-danger">Login failed: {{errormessage}} </div>
