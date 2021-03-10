@@ -10,6 +10,7 @@ import { HelloworldComponent } from './helloworld/helloworld.component';
 import { NoauthontificationGuardGuard } from './guards/noauthontification-guard.guard';
 import { ProduitComponent } from './produit/produit.component';
 import { PanierComponent } from './panier/panier.component';
+import { SmartphonesComponent } from './telephones/smartphones/smartphones.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
 { path: 'PcAccessoires', component: PcAccessoiresComponent },
 { path: 'Connexion', component: ConnexionComponent    },
 { path: 'helloworld', component: HelloworldComponent },
+{ path: 'smartphones', component: SmartphonesComponent },
 { path: 'stockage', loadChildren :'./modules/stockage/stockage.module#StockageModule' }
 
 ];
