@@ -14,6 +14,7 @@ cleUsb:any=[];
 
   ngOnInit(): void {
 
+    this.geteUsb();
    
 
   }

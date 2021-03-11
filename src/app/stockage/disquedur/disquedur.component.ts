@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ClesusbService } from 'src/app/services/clesusb.service';
+import { StockageService } from 'src/app/services/stockage.service';
 
 @Component({
   selector: 'app-disquedur',
@@ -9,14 +9,14 @@ import { ClesusbService } from 'src/app/services/clesusb.service';
 })
 export class DisquedurComponent implements OnInit {
 disquedur: any=[];
-  constructor(private disquedurServ: ClesusbService) { }
+  constructor(private disquedurServ: StockageService) { }
 
   ngOnInit(): void {
     this.GetDisqueDur();
   }
 
   GetDisqueDur(){
-    this.disquedurServ.getClesusb(7).subscribe(
+    this.disquedurServ.getStockage(7).subscribe(
       (data) =>{
         this.disquedur=data;
         console.log(this.disquedur);
