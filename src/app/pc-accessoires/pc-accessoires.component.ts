@@ -46,4 +46,16 @@ updatePcAccessoire(id,categorie):void{
   );
 
 }
+addPcAccessoires(id,categorie):void{
+  this.pcaccessoires.AddArticle(id, categorie)
+  .subscribe( data => {
+    alert("Pc accesoire " + id + " ajouté");
+
+  },
+  (err)=>{
+  }
+  );
+}
+
+
 }

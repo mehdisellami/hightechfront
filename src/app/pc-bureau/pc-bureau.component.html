@@ -6,6 +6,7 @@
           <p class="card-text">Prix : {{x.prix}} €</p>
           <p class="card-text">Marque : {{x.marque}} </p>
         </div>
+        <td><button (click)="(addPcBureau(x.id, x))" class="btn btn-danger">Ajouter</button></td>
         <td><button (click)="(delPcBureau(x.id))" class="btn btn-danger">Supprimer</button></td>
         <td><button (click)="(updatePcBureau(x.id, x))" class="btn btn-danger">Modifier</button></td>
 

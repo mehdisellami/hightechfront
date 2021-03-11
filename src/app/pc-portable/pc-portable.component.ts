@@ -47,5 +47,15 @@ export class PcPortableComponent implements OnInit {
     );
   }
 
+  addPcPortable(id,categorie):void{
+    this.pcportable.AddArticle(id, categorie)
+    .subscribe( data => {
+      alert("Pc portable " + id + " ajouté");
+
+    },
+    (err)=>{
+    }
+    );
+  }
 
 }

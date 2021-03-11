@@ -30,6 +30,10 @@ export class CatearticlesService {
     return this.http.put("http://localhost:8080/Hightech/hightech/listearticle/"+idCategorie,categorie);
 
   }
+  AddArticle(idCategorie, categorie){
+    return this.http.post("http://localhost:8080/Hightech/hightech/listearticle/"+idCategorie,categorie);
+
+  }
 /*
   getAll(): Observable<Array<Articles>> {
     return this.http.get<Array<Articles>>(this.url);
