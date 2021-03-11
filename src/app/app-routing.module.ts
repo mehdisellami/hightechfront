@@ -11,6 +11,10 @@ import { NoauthontificationGuardGuard } from './guards/noauthontification-guard.
 import { ProduitComponent } from './produit/produit.component';
 import { PanierComponent } from './panier/panier.component';
 import { SmartphonesComponent } from './telephones/smartphones/smartphones.component';
+import {StockageComponent} from './stockage/stockage.component';
+import { ClesusbService } from './services/clesusb.service';
+import { CleusbComponent } from './stockage/cleusb/cleusb.component';
+import { DisquedurComponent } from './stockage/disquedur/disquedur.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent },
@@ -21,8 +25,9 @@ const routes: Routes = [
 { path: 'Connexion', component: ConnexionComponent    },
 { path: 'helloworld', component: HelloworldComponent },
 { path: 'smartphones', component: SmartphonesComponent },
-{ path: 'stockage', loadChildren :'./modules/stockage/stockage.module#StockageModule' }
-
+{ path: 'stockage', loadChildren :'./modules/stockage/stockage.module#StockageModule' },
+{ path: 'clesusb', component: CleusbComponent },
+{ path: 'disquedur', component: DisquedurComponent }
 ];
 
 @NgModule({

@@ -1,1 +1,13 @@
-<p>cleusb works!</p>
+<div class="card-group">
+    <div *ngFor="let x of clesusb">
+        <div class="card">
+            <img class="card-img-top" src="../../assets/img/home/msi.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{ x.marque}}</h5>
+              <p class="card-text">{{x.libelle}}</p>
+              <p class="card-text"> {{x.prix}}</p>
+            </div>
+      </div>
+
+
+</div>

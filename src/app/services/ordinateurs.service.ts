@@ -7,7 +7,7 @@ import { Articles } from './Articles.model';
   providedIn: 'root'
 })
 export class OrdinateursService {
-  url = 'http://localhost:8080/article';
+  url = 'http://localhost:8080/Hightech/hightech/listearticle';
 
   constructor(private http: HttpClient) { }
 
