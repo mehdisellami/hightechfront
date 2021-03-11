@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StockageService } from 'src/app/services/stockage.service';
 
 @Component({
   selector: 'app-cleusb',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CleusbComponent implements OnInit {
 
-  constructor() { }
+cleUsb:any=[];
+
+  constructor(private stockageService:StockageService) { }
 
   ngOnInit(): void {
   }
 
+  
+  getCleUsb(){
+    this.stockageService.getStockage(8).subscribe(
+      (data) =>{
+        this.cleUsb=data;
+        console.log(this.cleUsb);
+
+      }
+    )
+  }
 }

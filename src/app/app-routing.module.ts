@@ -11,6 +11,9 @@ import { NoauthontificationGuardGuard } from './guards/noauthontification-guard.
 import { ProduitComponent } from './produit/produit.component';
 import { PanierComponent } from './panier/panier.component';
 import { SmartphonesComponent } from './telephones/smartphones/smartphones.component';
+import { CleusbComponent } from './stockage/cleusb/cleusb.component';
+import { DisquedurComponent } from './stockage/disquedur/disquedur.component';
+import { StockageAccessoiresComponent } from './stockage/stockage-accessoires/stockage-accessoires.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent },
@@ -21,6 +24,9 @@ const routes: Routes = [
 { path: 'Connexion', component: ConnexionComponent    },
 { path: 'helloworld', component: HelloworldComponent },
 { path: 'smartphones', component: SmartphonesComponent },
+{ path: 'cleusb', component: CleusbComponent },
+{ path: 'disquedur', component: DisquedurComponent },
+{ path: 'stockageAccessoires', component: StockageAccessoiresComponent },
 { path: 'stockage', loadChildren :'./modules/stockage/stockage.module#StockageModule' }
 
 ];
