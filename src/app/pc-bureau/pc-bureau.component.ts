@@ -33,4 +33,14 @@ article: any=[];
     }
     );
   }
+  updatePcBureau(id,categorie):void{
+    this.pcbureau.UpdateArticle(id, categorie)
+    .subscribe( data => {
+      alert("Pc bureau " + id + " modifié");
+
+    },
+    (err)=>{
+    }
+    );
+}
 }

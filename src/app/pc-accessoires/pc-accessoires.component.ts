@@ -35,4 +35,15 @@ delPcAccessoires(id):void{
   );
 }
 
+updatePcAccessoire(id,categorie):void{
+  this.pcaccessoires.UpdateArticle(id, categorie)
+  .subscribe( data => {
+    alert("Pc accessoire " + id + " modifié");
+
+  },
+  (err)=>{
+  }
+  );
+
+}
 }
