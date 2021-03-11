@@ -24,4 +24,15 @@ export class SmartphonesComponent implements OnInit {
       }
     )
   }
+
+  delSmartphones(id):void{
+    this.telServ.DeleteArticle(id)
+    .subscribe( data => {
+      alert("Pc supprimé " + id + " supprimée");
+    
+    },
+    (err)=>{
+    }
+    );  
+  }
 }
