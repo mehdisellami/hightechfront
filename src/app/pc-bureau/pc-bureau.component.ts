@@ -43,4 +43,16 @@ article: any=[];
     }
     );
 }
+addPcBureau(id,categorie):void{
+    this.pcbureau.AddArticle(id, categorie)
+    .subscribe( data => {
+      alert("Pc bureau " + id + " ajouté");
+
+    },
+    (err)=>{
+    }
+    );
+  }
+
+
 }
