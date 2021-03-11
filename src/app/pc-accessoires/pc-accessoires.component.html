@@ -1,1 +1,10 @@
-<p>pc-accessoires works!</p>
+<div class="row">
+    <div *ngFor="let x of articles" class="col-4 card">
+        <img class="card-img-top" src="{{x.photo}}" alt="Card image cap">
+        <div class="card-block">
+          <h5 class="card-title">{{x.libelle}}</h5>
+          <p class="card-text">Prix : {{x.prix}} €</p>
+          <p class="card-text">Marque : {{x.marque}} </p>
+        </div>
+    </div>
+  </div>
