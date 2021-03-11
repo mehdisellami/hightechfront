@@ -1,1 +1,10 @@
-<p>telaccessoires works!</p>
+<div class="row">
+    <div *ngFor="let telaccessoires of articles" class="col-4 card">
+      <img class="card-img-top" src="{{telaccessoires.photo}}" alt="Card image cap">
+      <div class="card-block">
+        <h5 class="card-title">{{telaccessoires.libelle}}</h5>
+        <p class="card-text">Prix : {{telaccessoires.prix}} €</p>
+        <p class="card-text">Marque : {{telaccessoires.marque}} </p>
+      </div>
+    </div>
+  </div>

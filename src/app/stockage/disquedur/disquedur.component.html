@@ -1,6 +1,10 @@
-<p>disquedur works!</p>
-<div *ngFor="let x of disquedur">
-<p> {{x.marque}}</p>
-<p> {{x.prix}}</p>
-<p> {{x.libelle}}</p>
-</div>
+<div class="row">
+    <div *ngFor="let disk of disquedur" class="col-4 card">
+      <img class="card-img-top" src="{{disk.photo}}" alt="Card image cap">
+      <div class="card-block">
+        <h5 class="card-title">{{disk.libelle}}</h5>
+        <p class="card-text">Prix : {{disk.prix}} €</p>
+        <p class="card-text">Marque : {{disk.marque}} </p>
+      </div>
+    </div>
+  </div>
