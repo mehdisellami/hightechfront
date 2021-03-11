@@ -5,6 +5,9 @@
       <h5 class="card-title">{{pc.libelle}}</h5>
       <p class="card-text">Prix : {{pc.prix}} €</p>
       <p class="card-text">Marque : {{pc.marque}} </p>
+      
+
     </div>
+    <td><button (click)="delPcPortable(pc.id)" class="btn btn-danger">Supprimer</button></td>
   </div>
 </div>

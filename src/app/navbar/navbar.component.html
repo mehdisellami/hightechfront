@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">HighTech Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +44,6 @@
               <a class="dropdown-item" routerLink="/stockageAccessoires"  routerLinkActive="clickEventHandler()">Accessoires</a>
             </div>
           </div>
-
           <div class="btn-group">
             <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Administrateur
@@ -61,12 +60,15 @@
             <a class="nav-link active" aria-current="page" routerLink="/Connexion" >Connexion</a>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn btn-info">LogOut</button>          </li>
+            <button type="button" class="btn btn-info">LogOut</button></li>
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
+        &nbsp;
+        <button type="button" class="btn btn-success" (click)="connexion()" >Connexion</button> &nbsp; 
+        <button type="button" class="btn btn-danger">LogOut</button>      
       </div>
     </div>
   </nav>
