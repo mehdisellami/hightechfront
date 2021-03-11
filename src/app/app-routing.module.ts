@@ -14,20 +14,24 @@ import { SmartphonesComponent } from './telephones/smartphones/smartphones.compo
 import { CleusbComponent } from './stockage/cleusb/cleusb.component';
 import { DisquedurComponent } from './stockage/disquedur/disquedur.component';
 import { StockageAccessoiresComponent } from './stockage/stockage-accessoires/stockage-accessoires.component';
+import { TelfixeComponent } from './telephones/telfixe/telfixe.component';
+import { TelaccessoiresComponent } from './telephones/telaccessoires/telaccessoires.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent },
 { path: 'PcPortable', component: PcPortableComponent  },
-{ path: 'PcBureau', component: PcBureauComponent  },
+{ path: 'pcburreau', component: PcBureauComponent  },
 { path: 'panier', component: PanierComponent  },
-{ path: 'PcAccessoires', component: PcAccessoiresComponent },
+{ path: 'pcaccessoires', component: PcAccessoiresComponent },
 { path: 'Connexion', component: ConnexionComponent    },
 { path: 'helloworld', component: HelloworldComponent },
 { path: 'smartphones', component: SmartphonesComponent },
 { path: 'cleusb', component: CleusbComponent },
 { path: 'disquedur', component: DisquedurComponent },
 { path: 'stockageAccessoires', component: StockageAccessoiresComponent },
-{ path: 'stockage', loadChildren :'./modules/stockage/stockage.module#StockageModule' }
+{ path: 'stockage', loadChildren :'./modules/stockage/stockage.module#StockageModule' },
+{ path: 'telfixe', component: TelfixeComponent},
+{ path: 'telaccessoires', component: TelaccessoiresComponent}
 
 ];
 
