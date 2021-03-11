@@ -23,4 +23,14 @@ article: any=[];
     );
   }
 
+  delPcBureau(id):void{
+    this.pcbureau.DeleteArticle(id)
+    .subscribe( data => {
+      alert("Pc bureau supprimé " + id + " supprimée");
+
+    },
+    (err)=>{
+    }
+    );
+  }
 }
