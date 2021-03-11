@@ -19,9 +19,20 @@ export class PcAccessoiresComponent implements OnInit {
     this.pcaccessoires.getarticles(3).subscribe(
       (data) => {
         this.articles=data;
-      console.log(data);  
+      console.log(data);
   }
     );
 
 }
+delPcAccessoires(id):void{
+  this.pcaccessoires.DeleteArticle(id)
+  .subscribe( data => {
+    alert("Accesoire PC supprimé " + id + " supprimée");
+
+  },
+  (err)=>{
+  }
+  );
+}
+
 }
