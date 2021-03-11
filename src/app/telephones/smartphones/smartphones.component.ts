@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TelephonesService } from 'src/app/services/telephones.service';
+import { CatearticlesService } from 'src/app/services/catearticles.service';
 
 @Component({
   selector: 'app-smartphones',
@@ -9,14 +9,14 @@ import { TelephonesService } from 'src/app/services/telephones.service';
 export class SmartphonesComponent implements OnInit {
   smartphones:any=[];
 
-  constructor(private telServ:TelephonesService) { }
+  constructor(private telServ:CatearticlesService) { }
 
   ngOnInit(): void {
     this.getSmartphones();
   }
 
   getSmartphones(){
-    this.telServ.getTelephones(4).subscribe(
+    this.telServ.getarticles(4).subscribe(
       (data) =>{
         this.smartphones=data;
         console.log(this.smartphones);

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CatearticlesService} from '../services/catearticles.service';
 
 @Component({
   selector: 'app-pc-bureau',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pc-bureau.component.css']
 })
 export class PcBureauComponent implements OnInit {
-
-  constructor() { }
+article: any=[];
+  constructor(private pcbureau: CatearticlesService) { }
 
   ngOnInit(): void {
+    this.GetProduit()
+  }
+
+  GetProduit(){
+    this.pcbureau.getarticles(2).subscribe(
+      (data) => {
+        this.article=data;
+        console.log(this.article);
+      }
+    );
   }
 
 }

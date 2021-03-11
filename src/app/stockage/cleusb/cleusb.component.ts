@@ -1,33 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { StockageService } from 'src/app/services/stockage.service';
-
+import { CatearticlesService } from 'src/app/services/catearticles.service';
 @Component({
   selector: 'app-cleusb',
   templateUrl: './cleusb.component.html',
   styleUrls: ['./cleusb.component.css']
 })
 export class CleusbComponent implements OnInit {
-
-cleUsb:any=[];
-
-  constructor(private stockageService:StockageService) { }
+  articles: any=[];
+  constructor(private produit: CatearticlesService) { }
 
   ngOnInit(): void {
-
-    this.geteUsb();
-   
-
+    this.GetProduit();
   }
 
-  geteUsb(){
-
-    this.stockageService.getStockage(8).subscribe(
-      (data) =>{
-        this.cleUsb=data;
-        console.log(this.cleUsb);
-
-      }
-    )
+  GetProduit(){
+    this.produit.getarticles(8).subscribe(
+      (data) => {
+        this.articles=data;
+      console.log(data);  
   }
+    );
+
+}
 
 }

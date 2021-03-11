@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CatearticlesService} from 'src/app/services/catearticles.service';
 
 @Component({
   selector: 'app-telaccessoires',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaccessoiresComponent implements OnInit {
 
-  constructor() { }
+  articles: any=[];
+  constructor(private telaccessoires: CatearticlesService) { }
 
   ngOnInit(): void {
+    this.GetProduit();
   }
+
+  GetProduit(){
+    this.telaccessoires.getarticles(6).subscribe(
+      (data) => {
+        this.articles=data;
+      console.log(data);  
+  }
+    );
+
+}
+
 
 }
