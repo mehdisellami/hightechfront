@@ -22,7 +22,7 @@ export class CatearticlesService {
   }
 
   DeleteArticle(idArticle){
-    return this.http.delete("http://localhost:8080/Hightech/hightech/listearticle/"+idArticle);
+    return this.http.delete<Object>("http://localhost:8080/Hightech/hightech/listearticle/"+idArticle);
 
   }
 /*

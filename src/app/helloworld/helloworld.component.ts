@@ -16,6 +16,8 @@ confirmation: boolean= false;
 isColorChanged: boolean = false;
 isFontChanged: boolean = false;
 
+name: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -28,5 +30,9 @@ isFontChanged: boolean = false;
 
   OnChoixCategorie(evt : Event){
     this.NomCategorie=(<HTMLInputElement>evt.target).value
+  }
+
+  setValue() {
+    this.name = 'Nancy';
   }
 }
