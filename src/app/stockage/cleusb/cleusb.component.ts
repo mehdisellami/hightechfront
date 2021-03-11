@@ -13,10 +13,13 @@ cleUsb:any=[];
   constructor(private stockageService:StockageService) { }
 
   ngOnInit(): void {
+
+   
+
   }
 
-  
-  getCleUsb(){
+  geteUsb(){
+
     this.stockageService.getStockage(8).subscribe(
       (data) =>{
         this.cleUsb=data;
@@ -25,4 +28,5 @@ cleUsb:any=[];
       }
     )
   }
+
 }
