@@ -21,8 +21,13 @@ export class CatearticlesService {
 
   }
 
-  DeleteArticle(idArticle){
-    return this.http.delete("http://localhost:8080/Hightech/hightech/listearticle/"+idArticle);
+  DeleteArticle(idCategorie){
+    return this.http.delete("http://localhost:8080/Hightech/hightech/listearticle/"+idCategorie);
+
+  }
+
+  UpdateArticle(idCategorie, categorie){
+    return this.http.put("http://localhost:8080/Hightech/hightech/listearticle/"+idCategorie,categorie);
 
   }
 /*

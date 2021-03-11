@@ -23,19 +23,29 @@ export class PcPortableComponent implements OnInit {
 
       }
     );
-     
+
   }
   delPcPortable(id):void{
     this.pcportable.DeleteArticle(id)
     .subscribe( data => {
       alert("Pc supprimé " + id + " supprimée");
-    
+
     },
     (err)=>{
     }
-    );  
+    );
+  }
+
+  updatePcPortable(id,categorie):void{
+    this.pcportable.UpdateArticle(id, categorie)
+    .subscribe( data => {
+      alert("Pc portable " + id + " modifié");
+
+    },
+    (err)=>{
+    }
+    );
   }
 
 
-  
 }
