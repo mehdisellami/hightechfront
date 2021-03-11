@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ClesusbService } from 'src/app/services/clesusb.service';
+import { StockageService } from 'src/app/services/stockage.service';
 
 @Component({
   selector: 'app-cleusb',
@@ -8,18 +8,23 @@ import { ClesusbService } from 'src/app/services/clesusb.service';
 })
 export class CleusbComponent implements OnInit {
 
-  clesusb : any=[];
-  constructor(private clesusbServ:ClesusbService) { }
+cleUsb:any=[];
+
+  constructor(private stockageService:StockageService) { }
 
   ngOnInit(): void {
-    this.GetClesusb();
+
+    this.geteUsb();
+   
+
   }
 
-  GetClesusb(){
-    this.clesusbServ.getClesusb(8).subscribe(
+  geteUsb(){
+
+    this.stockageService.getStockage(8).subscribe(
       (data) =>{
-        this.clesusb=data;
-        console.log(this.clesusb);
+        this.cleUsb=data;
+        console.log(this.cleUsb);
 
       }
     )

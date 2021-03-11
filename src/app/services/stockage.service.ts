@@ -1,14 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ClesusbService {
+export class StockageService {
 
   constructor(private http: HttpClient) { }
 
-  getClesusb(categorieID) {
+
+  getStockage(categorieID) {
     return this.http.get<Object>("http://localhost:8080/Hightech/hightech/listearticle/articlebycategorie/"+categorieID);
     }
 }
