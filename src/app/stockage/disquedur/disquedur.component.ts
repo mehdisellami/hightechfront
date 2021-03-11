@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { StockageService } from 'src/app/services/stockage.service';
 import { CatearticlesService } from 'src/app/services/catearticles.service';
 @Component({
   selector: 'app-disquedur',

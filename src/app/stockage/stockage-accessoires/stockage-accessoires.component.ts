@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StockageService } from 'src/app/services/stockage.service';
-
+import {CatearticlesService} from 'src/app/services/catearticles.service';
 @Component({
   selector: 'app-stockage-accessoires',
   templateUrl: './stockage-accessoires.component.html',
@@ -10,7 +9,7 @@ export class StockageAccessoiresComponent implements OnInit {
 
   stockageAccessoire:any=[];
 
-  constructor(private stockageServi:StockageService) { }
+  constructor(private stockageServi:CatearticlesService) { }
 
   ngOnInit(): void {
     this.GetStockageAccesoires();
@@ -18,7 +17,7 @@ export class StockageAccessoiresComponent implements OnInit {
 
 
   GetStockageAccesoires(){
-    this.stockageServi.getStockage(9).subscribe(
+    this.stockageServi.getarticles(9).subscribe(
       (data) =>{
         this.stockageAccessoire=data;
         console.log(this.stockageAccessoire);
