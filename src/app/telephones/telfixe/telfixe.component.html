@@ -1,1 +1,10 @@
-<p>telfixe works!</p>
+<div class="row">
+    <div *ngFor="let telfix of articles" class="col-4 card">
+      <img class="card-img-top" src="{{telfix.photo}}" alt="Card image cap">
+      <div class="card-block">
+        <h5 class="card-title">{{telfix.libelle}}</h5>
+        <p class="card-text">Prix : {{telfix.prix}} €</p>
+        <p class="card-text">Marque : {{telfix.marque}} </p>
+      </div>
+    </div>
+  </div>

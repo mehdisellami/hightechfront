@@ -1,13 +1,10 @@
-
-<div class="card-group" >
-
-    <div class="card" *ngFor="let smart of smartphones"> 
-      <img class="card-img-top" src="../../assets/img/home/msi.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{smart.libelle}}</h5>
-        <p class="card-text">Prix : {{smart.prix}} €</p>
-        <p class="card-text">Marque : {{smart.marque}} </p>
-      </div>
+<div class="row">
+  <div *ngFor="let smart of smartphones" class="col-4 card">
+    <img class="card-img-top" src="{{smart.photo}}" alt="Card image cap">
+    <div class="card-block">
+      <h5 class="card-title">{{smart.libelle}}</h5>
+      <p class="card-text">Prix : {{smart.prix}} €</p>
+      <p class="card-text">Marque : {{smart.marque}} </p>
     </div>
-    
   </div>
+</div>
