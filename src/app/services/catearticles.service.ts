@@ -20,6 +20,10 @@ export class CatearticlesService {
     return this.http.get<object>("http://localhost:8080/Hightech/hightech/listearticle");
 
   }
+  postarticles(article){
+    return this.http.post<Articles>("http://localhost8080/Hightech/hightech/listearticle",article);
+
+  }
 /*
   getAll(): Observable<Array<Articles>> {
     return this.http.get<Array<Articles>>(this.url);
