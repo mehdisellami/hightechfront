@@ -1,0 +1,42 @@
+<div style="text-align: center;"><h1>Modifier votre articles</h1></div><br>
+
+
+<form>
+    <div>
+        <div>
+            <label for=""> Identifiant  </label>
+            {{articlerecup.id}}
+        </div>
+
+
+        <div>
+            <label for=""> Libelle  </label>
+            <input type="text" name="libelle" [(ngModel)]="articlerecup.libelle">
+        </div>
+        
+        <div>
+            <label for="" > Marque </label>
+            <input type="text" name="marque" [(ngModel)]="articlerecup.marque">
+        </div>
+        <div>
+            <label for=""> Prix </label>
+        <input type="number" name="prix" [(ngModel)]="articlerecup.prix">
+        </div>
+        
+        <div>
+            <label for="">photo </label>
+            <input type="text" name="photo" [(ngModel)]="articlerecup.photo">
+        </div> 
+        
+        <div>
+            <label for="" Boutique></label>
+            <input type="text" name="boutique" [(ngModel)]="articlerecup.boutique">
+        </div>
+
+        <div>
+            <label for="" Categorie> </label>
+            <input type="text" name="categorie" [(ngModel)]="articlerecup.categorie">
+        </div>
+    <button type="submit" class="btn btn-primary" (click)="EditArticle()">Créer</button>
+    </div>
+</form>

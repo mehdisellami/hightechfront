@@ -21,9 +21,19 @@ export class CatearticlesService {
 
   }
 
+  
+  RecupMission(id){
+    return this.http.get<Object>("http://localhost:8080/Hightech/hightech/listearticle/"+id);
+  }
+
   postarticles(article){
     return this.http.post<Articles>("http://localhost8080/Hightech/hightech/listearticle",article);
   }
+
+  putarticles(idArticle,article){
+    return this.http.put<Articles>("http://localhost8080/Hightech/hightech/listearticle/"+idArticle ,article);
+  }
+
     DeleteArticle(idArticle){
     return this.http.delete("http://localhost:8080/Hightech/hightech/listearticle/"+idArticle);
 

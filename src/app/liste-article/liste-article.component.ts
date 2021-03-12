@@ -34,5 +34,8 @@ articles: any=[];
     }
     );  
   }
+  editArticle():void{
+  window.open("editarticle","_self"); 
+  }
 
 }
