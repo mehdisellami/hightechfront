@@ -1,0 +1,15 @@
+
+
+*{
+    padding-left: 10px;
+    padding-top: 30px;
+
+    padding-right: 10px;
+}
+
+
+
+.card-img-top{
+    height: 280px;
+    width: 330px;
+}

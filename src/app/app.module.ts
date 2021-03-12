@@ -22,7 +22,10 @@ import { TelaccessoiresComponent } from './telephones/telaccessoires/telaccessoi
 import { DisquedurComponent } from './stockage/disquedur/disquedur.component';
 import { CleusbComponent } from './stockage/cleusb/cleusb.component';
 import { StockageAccessoiresComponent } from './stockage/stockage-accessoires/stockage-accessoires.component';
-
+import { AjouterArticleComponent } from './ajouter-article/ajouter-article.component';
+import { CommonModule } from '@angular/common';
+import {ListeArticleComponent} from './liste-article/liste-article.component';
+import { EditarticleComponent } from './editarticle/editarticle.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,13 +44,17 @@ import { StockageAccessoiresComponent } from './stockage/stockage-accessoires/st
     TelaccessoiresComponent,
     DisquedurComponent,
     CleusbComponent,
-    StockageAccessoiresComponent
+    StockageAccessoiresComponent,
+    AjouterArticleComponent,
+    ListeArticleComponent,
+    EditarticleComponent
   ],
   imports: [
+    CommonModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     PhonesModule,
-    FormsModule,
     HttpClientModule
   ],
   providers: [],
