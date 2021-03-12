@@ -27,7 +27,7 @@ export class CatearticlesService {
   }
 
   postarticles(article){
-    return this.http.post<Articles>("http://localhost8080/Hightech/hightech/listearticle",article);
+    return this.http.post<Articles>("http://localhost:8080/Hightech/hightech/listearticle/",article);
   }
 
   putarticles(idArticle,article){
