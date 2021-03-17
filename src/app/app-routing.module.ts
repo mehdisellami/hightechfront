@@ -17,6 +17,8 @@ import { StockageAccessoiresComponent } from './stockage/stockage-accessoires/st
 import { TelfixeComponent } from './telephones/telfixe/telfixe.component';
 import { TelaccessoiresComponent } from './telephones/telaccessoires/telaccessoires.component';
 import { AjouterArticleComponent } from './ajouter-article/ajouter-article.component';
+import { ListeArticleComponent, } from './liste-article/liste-article.component';
+import { EditarticleComponent } from './editarticle/editarticle.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent },
@@ -33,7 +35,9 @@ const routes: Routes = [
 { path: 'stockage', loadChildren :'./modules/stockage/stockage.module#StockageModule' },
 { path: 'telfixe', component: TelfixeComponent},
 { path: 'telaccessoires', component: TelaccessoiresComponent},
-{ path: 'ajouterarticle', component: AjouterArticleComponent}
+{ path: 'ajouterarticle', component: AjouterArticleComponent},
+{ path: 'listearticle', component: ListeArticleComponent},
+{ path: 'editarticle', component: EditarticleComponent}
 
 ];
 

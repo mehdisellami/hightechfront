@@ -24,7 +24,8 @@ import { CleusbComponent } from './stockage/cleusb/cleusb.component';
 import { StockageAccessoiresComponent } from './stockage/stockage-accessoires/stockage-accessoires.component';
 import { AjouterArticleComponent } from './ajouter-article/ajouter-article.component';
 import { CommonModule } from '@angular/common';
-
+import {ListeArticleComponent} from './liste-article/liste-article.component';
+import { EditarticleComponent } from './editarticle/editarticle.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,9 @@ import { CommonModule } from '@angular/common';
     DisquedurComponent,
     CleusbComponent,
     StockageAccessoiresComponent,
-    AjouterArticleComponent
+    AjouterArticleComponent,
+    ListeArticleComponent,
+    EditarticleComponent
   ],
   imports: [
     CommonModule,

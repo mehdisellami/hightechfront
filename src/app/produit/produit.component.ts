@@ -18,9 +18,20 @@ articles: any=[];
     this.produit.getAllarticles().subscribe(
       (data) => {
         this.articles=data;
-      console.log(data);  
+      console.log(data);
   }
     );
 
 }
+delProduit(id):void{
+  this.produit.DeleteArticle(id)
+  .subscribe( data => {
+    alert("Produit supprimé " + id + " supprimée");
+
+  },
+  (err)=>{
+  }
+  );
+}
+
 }

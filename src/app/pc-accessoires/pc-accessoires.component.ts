@@ -19,9 +19,43 @@ export class PcAccessoiresComponent implements OnInit {
     this.pcaccessoires.getarticles(3).subscribe(
       (data) => {
         this.articles=data;
-      console.log(data);  
+      console.log(data);
   }
     );
 
 }
+delPcAccessoires(id):void{
+  this.pcaccessoires.DeleteArticle(id)
+  .subscribe( data => {
+    alert("Accesoire PC supprimé " + id + " supprimée");
+
+  },
+  (err)=>{
+  }
+  );
+}
+
+updatePcAccessoire(id,categorie):void{
+  this.pcaccessoires.UpdateArticle(id, categorie)
+  .subscribe( data => {
+    alert("Pc accessoire " + id + " modifié");
+
+  },
+  (err)=>{
+  }
+  );
+
+}
+addPcAccessoires(id,categorie):void{
+  this.pcaccessoires.AddArticle(id, categorie)
+  .subscribe( data => {
+    alert("Pc accesoire " + id + " ajouté");
+
+  },
+  (err)=>{
+  }
+  );
+}
+
+
 }
