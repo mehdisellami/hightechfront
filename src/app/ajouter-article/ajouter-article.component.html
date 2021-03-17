@@ -1,0 +1,36 @@
+<div style="text-align: center;"><h1>Ajouter vos articles</h1></div><br>
+
+
+<form>
+    <div>
+        <div>
+            <label for=""> Identifiant  </label>
+            <input type="text" name="id" [(ngModel)]="articleInstance.id">
+        </div>
+
+
+        <div>
+            <label for=""> Libelle  </label>
+            <input type="text" name="libelle" [(ngModel)]="articleInstance.libelle">
+        </div>
+        
+        <div>
+            <label for="" > Marque </label>
+            <input type="text" name="marque" [(ngModel)]="articleInstance.marque">
+        </div>
+        <div>
+            <label for=""> Prix </label>
+        <input type="number" name="prix" [(ngModel)]="articleInstance.prix">
+        </div>
+        
+        <div>
+            <label for="">photo </label>
+            <input type="text" name="photo" [(ngModel)]="articleInstance.photo">
+        </div> 
+        
+       
+
+       
+    <button type="submit" class="btn btn-primary" (click)="btnadd()">Créer</button>
+    </div>
+</form>

@@ -16,6 +16,7 @@ import { DisquedurComponent } from './stockage/disquedur/disquedur.component';
 import { StockageAccessoiresComponent } from './stockage/stockage-accessoires/stockage-accessoires.component';
 import { TelfixeComponent } from './telephones/telfixe/telfixe.component';
 import { TelaccessoiresComponent } from './telephones/telaccessoires/telaccessoires.component';
+import { AjouterArticleComponent } from './ajouter-article/ajouter-article.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent },
@@ -31,7 +32,8 @@ const routes: Routes = [
 { path: 'stockageAccessoires', component: StockageAccessoiresComponent },
 { path: 'stockage', loadChildren :'./modules/stockage/stockage.module#StockageModule' },
 { path: 'telfixe', component: TelfixeComponent},
-{ path: 'telaccessoires', component: TelaccessoiresComponent}
+{ path: 'telaccessoires', component: TelaccessoiresComponent},
+{ path: 'ajouterarticle', component: AjouterArticleComponent}
 
 ];
 

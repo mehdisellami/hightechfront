@@ -4,6 +4,6 @@ export class Articles {
     marque: string;
     prix: number;
     photo: string;
-
+    
 
    }

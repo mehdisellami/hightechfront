@@ -44,8 +44,23 @@
               <a class="dropdown-item" routerLink="/stockageAccessoires"  routerLinkActive="clickEventHandler()">Accessoires</a>
             </div>
           </div>
+          <div class="btn-group">
+            <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Administrateur
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="/ajouterarticle"  routerLinkActive="clickEventHandler()"> Ajouter un article</a>
+              <a class="dropdown-item" routerLink="/suprimerarticle"  routerLinkActive="clickEventHandler()"> Suprimmer un article</a>
+              <a class="dropdown-item" routerLink="/modifierarticle"  routerLinkActive="clickEventHandler()"> Modifier un article</a>
+            </div>
+          </div>
 
-        
+          
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/Connexion" >Connexion</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-info">LogOut</button></li>
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
