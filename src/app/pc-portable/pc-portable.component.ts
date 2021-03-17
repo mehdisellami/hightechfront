@@ -37,7 +37,7 @@ export class PcPortableComponent implements OnInit {
   }
 
   updatePcPortable(id,categorie):void{
-    this.pcportable.putarticles(id, categorie)
+    this.pcportable.putarticles(categorie)
     .subscribe( data => {
       alert("Pc portable " + id + " modifié");
 

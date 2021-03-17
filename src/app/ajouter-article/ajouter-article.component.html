@@ -27,7 +27,14 @@
             <label for="">photo </label>
             <input type="text" name="photo" [(ngModel)]="articleInstance.photo">
         </div> 
-        
+
+        <div>
+        <label for="">Catégorie Article</label>
+        <select type="text" id="nbetoile" name="nbetoile" [(ngModel)]="articleInstance.categorieArticle.id" style="width: 200px;">
+            <option *ngFor="let x of categorie" [ngValue]="x.id">{{x.libelleArticle}}</option>
+            
+          </select>
+        </div>
        
 
        

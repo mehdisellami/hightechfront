@@ -13,10 +13,12 @@ export class AjouterArticleComponent implements OnInit {
 
   articleInstance: Articles = new Articles();
   
+  categorie:any=[];
 
   constructor(private article: CatearticlesService) { }
 
   ngOnInit(): void {
+    this.recupererCategorie();
   }
   
 
@@ -31,6 +33,16 @@ export class AjouterArticleComponent implements OnInit {
       return this.articleInstance;
     },
     (err)=>{});  
+ }
+
+ recupererCategorie(){
+   this.article.getCategorie().subscribe(
+     (data)=>{
+
+      this.categorie=data
+      console.log(this.categorie)
+     }
+   )
  }
 
 }
