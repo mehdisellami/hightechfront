@@ -37,7 +37,7 @@ const routes: Routes = [
 { path: 'telaccessoires', component: TelaccessoiresComponent},
 { path: 'ajouterarticle', component: AjouterArticleComponent},
 { path: 'listearticle', component: ListeArticleComponent},
-{ path: 'editarticle', component: EditarticleComponent}
+{ path: 'editarticle/:id', component: EditarticleComponent}
 
 ];
 

@@ -34,7 +34,7 @@ article: any=[];
     );
   }
   updatePcBureau(id,categorie):void{
-    this.pcbureau.putarticles(id, categorie)
+    this.pcbureau.putarticles(categorie)
     .subscribe( data => {
       alert("Pc bureau " + id + " modifié");
 

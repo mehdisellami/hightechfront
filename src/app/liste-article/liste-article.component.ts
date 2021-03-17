@@ -34,8 +34,10 @@ articles: any=[];
     }
     );
   }
-  editArticle():void{
-  window.open("editarticle","_self");
+
+  editArticle(id):void{
+  window.open("/editarticle/"+id,"_self");
   }
+ 
 
 }
