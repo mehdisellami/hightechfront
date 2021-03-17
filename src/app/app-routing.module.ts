@@ -24,7 +24,7 @@ const routes: Routes = [
 { path: '', component: HomeComponent },
 { path: 'PcPortable', component: PcPortableComponent  },
 { path: 'pcburreau', component: PcBureauComponent  },
-{ path: 'panier', component: PanierComponent  },
+{ path: 'panier/:id', component: PanierComponent  },
 { path: 'pcaccessoires', component: PcAccessoiresComponent },
 { path: 'Connexion', component: ConnexionComponent    },
 { path: 'helloworld', component: HelloworldComponent },

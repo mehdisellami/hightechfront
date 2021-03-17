@@ -23,10 +23,11 @@ export class CleusbComponent implements OnInit {
     );
 
 }
-panier():any{
-  window.open("panier","_self");
+panier(id):void{
+  window.open("/panier/"+id,"_self");
 
 }
+
 
 
 

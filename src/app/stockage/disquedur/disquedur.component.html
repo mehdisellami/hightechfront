@@ -6,6 +6,8 @@
         <p class="card-text">Prix : {{disk.prix}} €</p>
         <p class="card-text">Marque : {{disk.marque}} </p>
         <td><button class="btn btn-danger"> Modifier </button></td>
+        <td><button  class="btn btn-danger" (click)="panier(disk.id)"> Acheter </button></td>
+
 
 
       </div>

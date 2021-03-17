@@ -57,5 +57,9 @@ addPcAccessoires(id):void{
   );
 }
 
+panier(id):void{
+  window.open("/panier/"+id,"_self");
+
+}
 
 }

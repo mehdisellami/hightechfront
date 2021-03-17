@@ -54,5 +54,10 @@ addPcBureau(id,categorie):void{
     );
   }
 
+  panier(id):void{
+    window.open("/panier/"+id,"_self");
+  
+  }
+
 
 }

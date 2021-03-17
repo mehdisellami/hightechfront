@@ -57,5 +57,9 @@ export class PcPortableComponent implements OnInit {
     }
     );
   }
+  panier(id):void{
+    window.open("/panier/"+id,"_self");
+  
+  }
 
 }

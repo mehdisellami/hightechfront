@@ -22,7 +22,7 @@ export class CatearticlesService {
   }
 
   
-  RecupMission(id){
+  RecupArticles(id){
     return this.http.get<Object>("http://localhost:8080/Hightech/hightech/listearticle/"+id);
   }
 
@@ -31,7 +31,7 @@ export class CatearticlesService {
   }
 
   putarticles(idArticle,article){
-    return this.http.put<Articles>("http://localhost8080/Hightech/hightech/listearticle/"+idArticle ,article);
+    return this.http.put<Articles>("http://localhost:8080/Hightech/hightech/listearticle/"+idArticle ,article);
   }
 
     DeleteArticle(idArticle){

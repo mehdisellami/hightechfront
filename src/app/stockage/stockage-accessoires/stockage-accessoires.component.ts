@@ -24,4 +24,8 @@ export class StockageAccessoiresComponent implements OnInit {
     }
     );
   }
+  panier(id):void{
+    window.open("/panier/"+id,"_self");
+  
+  }
 }

@@ -5,6 +5,7 @@
         <h5 class="card-title">{{stockageAccessoire.libelle}}</h5>
         <p class="card-text">Prix : {{stockageAccessoire.prix}} €</p>
         <p class="card-text">Marque : {{stockageAccessoire.marque}} </p>
+        <p><button  class="btn btn-danger" (click)="panier(stockageAccessoire.id)"> Acheter </button></p>
       </div>
     </div>
   </div>

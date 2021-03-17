@@ -23,5 +23,9 @@ export class DisquedurComponent implements OnInit {
       );
   
   }
+  panier(id):void{
+    window.open("/panier/"+id,"_self");
+  
+  }
   
 }

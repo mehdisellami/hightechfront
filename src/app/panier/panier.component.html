@@ -1,10 +1,40 @@
-<ul>
+<br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Identifiant
+            </th>
+            <th>
+                Libelle
+            </th>
+            <th>
+                Marque
+            </th>
+            <th>
+                Prix
+            </th>
+            <th>
+                Photo
+            </th>
+            <th>
+                Boutique
+            </th>
+            <th>
+                Categorie
+            </th>            
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ articlerecup.id}}</td>
+                <td>{{ articlerecup.libelle}}</td>
+                <td>{{ articlerecup.marque}}</td>
+                <td>{{ articlerecup.prix}}</td>
+                <td> <img class="card-img-top" src="{{articlerecup.photo}}" alt="Card image cap"> </td>
+                <td>{{ articlerecup.boutique}}</td>
+                <td>{{ articlerecup.categorie}}</td>
+            </tr>
+        </tbody>
 
-Mon Panier : 
-</ul>
-
-<ul>
-
-    <app-produit>HP PC</app-produit>
-    <app-produit>Clavier PC</app-produit>
-</ul>
+</table>
