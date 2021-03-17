@@ -25,7 +25,7 @@ articles: any=[];
 
 
   delArticle(id):void{
-    this.article.deleteArticle(id)
+    this.article.DeleteArticle(id)
     .subscribe( data => {
       alert("Article supprimé " + id + " supprimée");
 

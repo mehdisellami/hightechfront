@@ -6,9 +6,9 @@
           <p class="card-text">Prix : {{x.prix}} €</p>
           <p class="card-text">Marque : {{x.marque}} </p>
         </div>
-        <td><button (click)="(addPcAccessoires(x.id, x))" class="btn btn-danger">Ajouter</button></td>
-        <td><button (click)="(delPcAccessoires(x.id))" class="btn btn-danger">Supprimer</button></td>
-        <td><button (click)="(updatePcAccessoire(x.id, x))" class="btn btn-danger">Modifier</button></td>
+        <td><button (click)="addPcAccessoires(x.id)" class="btn btn-danger">Ajouter</button></td>
+        <td><button (click)="delPcAccessoires(x.id)" class="btn btn-danger">Supprimer</button></td>
+        <td><button (click)="updatePcAccessoire(x.id,  x)" class="btn btn-danger">Modifier</button></td>
 
 
     </div>

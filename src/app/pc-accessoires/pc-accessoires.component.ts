@@ -36,7 +36,7 @@ delPcAccessoires(id):void{
 }
 
 updatePcAccessoire(id,categorie):void{
-  this.pcaccessoires.UpdateArticle(id, categorie)
+  this.pcaccessoires.putarticles(id, categorie)
   .subscribe( data => {
     alert("Pc accessoire " + id + " modifié");
 
@@ -46,8 +46,8 @@ updatePcAccessoire(id,categorie):void{
   );
 
 }
-addPcAccessoires(id,categorie):void{
-  this.pcaccessoires.AddArticle(id, categorie)
+addPcAccessoires(id):void{
+  this.pcaccessoires.postarticles(id)
   .subscribe( data => {
     alert("Pc accesoire " + id + " ajouté");
 

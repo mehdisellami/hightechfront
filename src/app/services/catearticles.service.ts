@@ -21,26 +21,13 @@ export class CatearticlesService {
 
   }
 
-<<<<<<< HEAD
-  DeleteArticle(idCategorie){
-    return this.http.delete("http://localhost:8080/Hightech/hightech/listearticle/"+idCategorie);
-
-  }
-
-  UpdateArticle(idCategorie, categorie){
-    return this.http.put("http://localhost:8080/Hightech/hightech/listearticle/"+idCategorie,categorie);
-
-  }
-  AddArticle(idCategorie, categorie){
-    return this.http.post("http://localhost:8080/Hightech/hightech/listearticle/"+idCategorie,categorie);
-=======
   
   RecupMission(id){
     return this.http.get<Object>("http://localhost:8080/Hightech/hightech/listearticle/"+id);
   }
 
   postarticles(article){
-    return this.http.post<Articles>("http://localhost:8080/Hightech/hightech/listearticle",article);
+    return this.http.post<Articles>("http://localhost:8080/Hightech/hightech/listearticle/ajouterarticle",article);
   }
 
   putarticles(idArticle,article){
@@ -49,7 +36,6 @@ export class CatearticlesService {
 
     DeleteArticle(idArticle){
     return this.http.delete("http://localhost:8080/Hightech/hightech/listearticle/"+idArticle);
->>>>>>> f88de70e229b2c0111ea08f60262c36af055ef1e
 
   }
 /*

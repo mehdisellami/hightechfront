@@ -34,7 +34,7 @@ article: any=[];
     );
   }
   updatePcBureau(id,categorie):void{
-    this.pcbureau.UpdateArticle(id, categorie)
+    this.pcbureau.putarticles(id, categorie)
     .subscribe( data => {
       alert("Pc bureau " + id + " modifié");
 
@@ -44,7 +44,7 @@ article: any=[];
     );
 }
 addPcBureau(id,categorie):void{
-    this.pcbureau.AddArticle(id, categorie)
+    this.pcbureau.postarticles(id)
     .subscribe( data => {
       alert("Pc bureau " + id + " ajouté");
 
