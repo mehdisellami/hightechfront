@@ -36,7 +36,7 @@ delPcAccessoires(id):void{
 }
 
 updatePcAccessoire(id,categorie):void{
-  this.pcaccessoires.putarticles(id, categorie)
+  this.pcaccessoires.putarticles(categorie)
   .subscribe( data => {
     alert("Pc accessoire " + id + " modifié");
 

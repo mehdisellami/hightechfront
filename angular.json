@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hightech"
+    }
+  },
+  "defaultProject": "hightech",
+  "cli": {
+    "analytics": "a3fbe395-c6ba-4028-99fe-2c2faccddce6"
+  }
 }

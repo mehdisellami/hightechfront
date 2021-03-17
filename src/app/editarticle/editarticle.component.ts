@@ -9,6 +9,7 @@ import { CatearticlesService } from '../services/catearticles.service';
   styleUrls: ['./editarticle.component.css']
 })
 export class EditarticleComponent implements OnInit {
+  
 idarticle: any;
 articlerecup: any;
 
@@ -16,7 +17,6 @@ articlerecup: any;
 
   ngOnInit(): void {
   this.idarticle=this.route.snapshot.paramMap.get('id');
-  console.log(this.idarticle);
   this.recupArticles(this.idarticle);
 }
 
@@ -29,12 +29,15 @@ recupArticles(id){
   );
 }
 
-EditArticle(){
-  this.article.RecupArticles(this.articlerecup).subscribe(
-    (data)=> {
-      this.articlerecup=data;
-      console.log(this.articlerecup);
-    },
+EditArticle()
+{
+  this.article.putarticles(this.articlerecup).subscribe(
+    (data)=>{
+      const type = 'success';
+      alert("Modification effectuée !");
+    return data;
+  },
+  (err)=>{alert("ERROR " + this.articlerecup.id + " " + this.articlerecup.libelle + " " + this.articlerecup.marque + " " + this.articlerecup.prix + " " + this.articlerecup.photo);}
   );
 }
 
