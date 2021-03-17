@@ -23,19 +23,19 @@ articles: any=[];
      );
    }
 
-   
+
   delArticle(id):void{
     this.article.DeleteArticle(id)
     .subscribe( data => {
       alert("Article supprimé " + id + " supprimée");
-    
+
     },
     (err)=>{
     }
-    );  
+    );
   }
   editArticle():void{
-  window.open("editarticle","_self"); 
+  window.open("editarticle","_self");
   }
 
 }

@@ -25,7 +25,7 @@ export class SmartphonesComponent implements OnInit {
     )
   }
 
-  delSmartphones(id):void{
+  delSmartphones(id){
     this.telServ.DeleteArticle(id)
     .subscribe( data => {
       alert("Pc supprimé " + id + " supprimée");

@@ -23,4 +23,36 @@ article: any=[];
     );
   }
 
+  delPcBureau(id):void{
+    this.pcbureau.DeleteArticle(id)
+    .subscribe( data => {
+      alert("Pc bureau supprimé " + id + " supprimée");
+
+    },
+    (err)=>{
+    }
+    );
+  }
+  updatePcBureau(id,categorie):void{
+    this.pcbureau.putarticles(id, categorie)
+    .subscribe( data => {
+      alert("Pc bureau " + id + " modifié");
+
+    },
+    (err)=>{
+    }
+    );
+}
+addPcBureau(id,categorie):void{
+    this.pcbureau.postarticles(id)
+    .subscribe( data => {
+      alert("Pc bureau " + id + " ajouté");
+
+    },
+    (err)=>{
+    }
+    );
+  }
+
+
 }
