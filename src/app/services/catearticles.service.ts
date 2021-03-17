@@ -27,7 +27,7 @@ export class CatearticlesService {
   }
 
   postarticles(article){
-    return this.http.post<Articles>("http://localhost:8080/Hightech/hightech/listearticle/ajouterarticle",article);
+    return this.http.post<Articles>("http://localhost:8080/Hightech/hightech/listearticle",article);
   }
 
   putarticles(idArticle,article){
@@ -36,6 +36,11 @@ export class CatearticlesService {
 
     DeleteArticle(idArticle){
     return this.http.delete("http://localhost:8080/Hightech/hightech/listearticle/"+idArticle);
+
+  }
+
+  getCategorie(){
+    return this.http.get<object>("http://localhost:8080/Hightech/hightech/listearticle/categories");
 
   }
 /*
