@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CatearticlesService } from '../services/catearticles.service';
 
+
 @Component({
   selector: 'app-editarticle',
   templateUrl: './editarticle.component.html',
@@ -15,12 +16,12 @@ articlerecup: any;
 
   ngOnInit(): void {
   this.idarticle=this.route.snapshot.paramMap.get('id');
-  //console.log(this.idarticle);
-  this.recupMission(this.idarticle);
+  console.log(this.idarticle);
+  this.recupArticles(this.idarticle);
 }
 
-recupMission(id){
-  this.article.RecupMission(id).subscribe(
+recupArticles(id){
+  this.article.RecupArticles(id).subscribe(
     (data) => {
       this.articlerecup=data;
       console.log(this.article);
@@ -29,7 +30,7 @@ recupMission(id){
 }
 
 EditArticle(){
-  this.article.RecupMission(this.articlerecup).subscribe(
+  this.article.RecupArticles(this.articlerecup).subscribe(
     (data)=> {
       this.articlerecup=data;
       console.log(this.articlerecup);
