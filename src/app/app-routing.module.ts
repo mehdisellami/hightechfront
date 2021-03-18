@@ -7,7 +7,6 @@ import { PcBureauComponent } from './pc-bureau/pc-bureau.component';
 import { PcPortableComponent } from './pc-portable/pc-portable.component';
 import {StockageModule} from './modules/stockage/stockage.module'
 import { HelloworldComponent } from './helloworld/helloworld.component';
-import { NoauthontificationGuardGuard } from './guards/noauthontification-guard.guard';
 import { ProduitComponent } from './produit/produit.component';
 import { PanierComponent } from './panier/panier.component';
 import { SmartphonesComponent } from './telephones/smartphones/smartphones.component';
@@ -19,25 +18,26 @@ import { TelaccessoiresComponent } from './telephones/telaccessoires/telaccessoi
 import { AjouterArticleComponent } from './ajouter-article/ajouter-article.component';
 import { ListeArticleComponent, } from './liste-article/liste-article.component';
 import { EditarticleComponent } from './editarticle/editarticle.component';
+import { AuthontificationGuardGuard } from './guards/authontification-guard.guard';
 
 const routes: Routes = [
-{ path: '', component: HomeComponent },
-{ path: 'PcPortable', component: PcPortableComponent  },
-{ path: 'pcburreau', component: PcBureauComponent  },
-{ path: 'panier/:id', component: PanierComponent  },
-{ path: 'pcaccessoires', component: PcAccessoiresComponent },
+{ path: '', component: HomeComponent , canActivate: [AuthontificationGuardGuard]  },
+{ path: 'PcPortable', component: PcPortableComponent  , canActivate: [AuthontificationGuardGuard] },
+{ path: 'pcburreau', component: PcBureauComponent  , canActivate: [AuthontificationGuardGuard]},
+{ path: 'panier/:id', component: PanierComponent  , canActivate: [AuthontificationGuardGuard] },
+{ path: 'pcaccessoires', component: PcAccessoiresComponent , canActivate: [AuthontificationGuardGuard]},
 { path: 'Connexion', component: ConnexionComponent    },
-{ path: 'helloworld', component: HelloworldComponent },
-{ path: 'smartphones', component: SmartphonesComponent },
-{ path: 'cleusb', component: CleusbComponent },
-{ path: 'disquedur', component: DisquedurComponent },
-{ path: 'stockageAccessoires', component: StockageAccessoiresComponent },
-{ path: 'stockage', loadChildren :'./modules/stockage/stockage.module#StockageModule' },
-{ path: 'telfixe', component: TelfixeComponent},
-{ path: 'telaccessoires', component: TelaccessoiresComponent},
-{ path: 'ajouterarticle', component: AjouterArticleComponent},
-{ path: 'listearticle', component: ListeArticleComponent},
-{ path: 'editarticle/:id', component: EditarticleComponent}
+{ path: 'helloworld', component: HelloworldComponent , canActivate: [AuthontificationGuardGuard]},
+{ path: 'smartphones', component: SmartphonesComponent , canActivate: [AuthontificationGuardGuard] },
+{ path: 'cleusb', component: CleusbComponent, canActivate: [AuthontificationGuardGuard] },
+{ path: 'disquedur', component: DisquedurComponent, canActivate: [AuthontificationGuardGuard] },
+{ path: 'stockageAccessoires', component: StockageAccessoiresComponent, canActivate: [AuthontificationGuardGuard] },
+{ path: 'stockage', loadChildren :'./modules/stockage/stockage.module#StockageModule' , canActivate: [AuthontificationGuardGuard] },
+{ path: 'telfixe', component: TelfixeComponent , canActivate: [AuthontificationGuardGuard]},
+{ path: 'telaccessoires', component: TelaccessoiresComponent , canActivate: [AuthontificationGuardGuard]},
+{ path: 'ajouterarticle', component: AjouterArticleComponent , canActivate: [AuthontificationGuardGuard]},
+{ path: 'listearticle', component: ListeArticleComponent, canActivate: [AuthontificationGuardGuard]},
+{ path: 'editarticle/:id', component: EditarticleComponent , canActivate: [AuthontificationGuardGuard]}
 
 ];
 

@@ -26,6 +26,8 @@ import { AjouterArticleComponent } from './ajouter-article/ajouter-article.compo
 import { CommonModule } from '@angular/common';
 import {ListeArticleComponent} from './liste-article/liste-article.component';
 import { EditarticleComponent } from './editarticle/editarticle.component';
+import { AuthontificationGuardGuard } from './guards/authontification-guard.guard';
+import { LoginService } from './services/login.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +59,7 @@ import { EditarticleComponent } from './editarticle/editarticle.component';
     PhonesModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [LoginService,AuthontificationGuardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

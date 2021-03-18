@@ -7,8 +7,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Accueil</a></li>
-        <div class="btn-group">
+        <li class="nav-item" ><a class="nav-link active" aria-current="page" href="#">Accueil</a></li>
+        <div class="btn-group" *ngIf="isLoggedIn">
           <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false"> Ordinateurs </a>
           <div class="dropdown-menu">
@@ -19,7 +19,7 @@
           </div>
         </div>
 
-        <div class="btn-group">
+        <div class="btn-group" *ngIf="isLoggedIn">
           <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false"> Telephones </a>
           <div class="dropdown-menu">
@@ -30,7 +30,7 @@
           </div>
         </div>
 
-        <div class="btn-group">
+        <div class="btn-group" *ngIf="isLoggedIn">
           <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             Stockage
@@ -42,7 +42,7 @@
               routerLinkActive="clickEventHandler()">Accessoires</a>
           </div>
         </div>
-        <div class="btn-group">
+        <div class="btn-group" *ngIf="isLoggedIn">
           <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false"> Administrateur </a>
           <div class="dropdown-menu">
@@ -50,7 +50,7 @@
               article</a>
             <a class="dropdown-item" routerLink="/listearticle" routerLinkActive="clickEventHandler()"> Catalogue</a>
           </div>
-          <div class="btn-group">
+          <div class="btn-group" *ngIf="isLoggedIn">
             <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Panier de paiement 
             </a>
@@ -60,20 +60,16 @@
           </div>
         </div>
 
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/Connexion">Connexion</a>
-        </li>
-        <li class="nav-item">
-          <button type="button" class="btn btn-info">LogOut</button>
-        </li>
+        
+       
       </ul>
-      <form class="d-flex">
+      <form class="d-flex" >
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-      &nbsp;
       <button type="button" class="btn btn-success" (click)="connexion()">Connexion</button> &nbsp;
-      <button type="button" class="btn btn-danger">LogOut</button>
+      <button type="button" class="btn btn-info" (click) ="logOut()">LogOut</button>
+
     </div>
   </div>
 </nav>
