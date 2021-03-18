@@ -1,5 +1,8 @@
-export class  categorieArticle{
+export class  categorie{
     id:any;
+
+ 
+   
 
     
 }

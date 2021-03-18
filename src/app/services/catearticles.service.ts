@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Articles } from './Articles.model';
 import { Observable } from 'rxjs';
+import { Articles } from '../ajouter-article/Articles.model';
 
 
 
