@@ -1,81 +1,78 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">HighTech Store</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-
-          <div class="btn-group">
-            <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Ordinateurs
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" routerLink="/PcPortable"  routerLinkActive="clickEventHandler()">PC Portable</a>
-              <a class="dropdown-item" routerLink="pcburreau"  routerLinkActive="clickEventHandler()">PC Burreau</a>
-              <a class="dropdown-item" routerLink="pcaccessoires"  routerLinkActive="clickEventHandler()">Accessoires</a>
-            </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">HighTech Store</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Accueil</a></li>
+        <div class="btn-group">
+          <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"> Ordinateurs </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/PcPortable" routerLinkActive="clickEventHandler()">PC Portables</a>
+            <a class="dropdown-item" routerLink="pcburreau" routerLinkActive="clickEventHandler()">PC Fixes</a>
+            <a class="dropdown-item" routerLink="pcaccessoires" routerLinkActive="clickEventHandler()">Accessoires
+              PC</a>
           </div>
-         
+        </div>
 
-          <div class="btn-group">
-            <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Telephones
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" routerLink="/smartphones"  routerLinkActive="clickEventHandler()">Smartphone</a>
-              <a class="dropdown-item" routerLink="telfixe"  routerLinkActive="clickEventHandler()">Tel fixe</a>
-              <a class="dropdown-item" routerLink="telaccessoires"  routerLinkActive="clickEventHandler()">Accessoires</a>
-            </div>
+        <div class="btn-group">
+          <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"> Telephones </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/smartphones" routerLinkActive="clickEventHandler()">Smartphones</a>
+            <a class="dropdown-item" routerLink="telfixe" routerLinkActive="clickEventHandler()">Téléphones fixe</a>
+            <a class="dropdown-item" routerLink="telaccessoires" routerLinkActive="clickEventHandler()">Accessoires
+              téléphones</a>
           </div>
+        </div>
 
+        <div class="btn-group">
+          <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Stockage
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/disquedur" routerLinkActive="clickEventHandler()">Disques durs</a>
+            <a class="dropdown-item" routerLink="/cleusb" routerLinkActive="clickEventHandler()">Clés USB</a>
+            <a class="dropdown-item" routerLink="/stockageAccessoires"
+              routerLinkActive="clickEventHandler()">Accessoires</a>
+          </div>
+        </div>
+        <div class="btn-group">
+          <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"> Administrateur </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/ajouterarticle" routerLinkActive="clickEventHandler()"> Ajouter un
+              article</a>
+            <a class="dropdown-item" routerLink="/listearticle" routerLinkActive="clickEventHandler()"> Catalogue</a>
+          </div>
+        </div>
+        <div class="btn-group">
+          <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"> Panier </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/panier" routerLinkActive="clickEventHandler()">Mon panier</a>
+          </div>
+        </div>
 
-          <div class="btn-group">
-            <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Stockage
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" routerLink="/disquedur"  routerLinkActive="clickEventHandler()">Disque dur</a>
-              <a class="dropdown-item" routerLink="/cleusb"  routerLinkActive="clickEventHandler()">Clé USB</a>
-              <a class="dropdown-item" routerLink="/stockageAccessoires"  routerLinkActive="clickEventHandler()">Accessoires</a>
-            </div>
-          </div>
-          <div class="btn-group">
-            <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Administrateur
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" routerLink="/ajouterarticle"  routerLinkActive="clickEventHandler()"> Ajouter un article</a>
-              <a class="dropdown-item" routerLink="/listearticle"  routerLinkActive="clickEventHandler()"> Catalogue</a>
-            </div>
-          </div>
-          <div class="btn-group">
-            <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Panier de paiement 
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" routerLink="/panier"  routerLinkActive="clickEventHandler()">Mon panier</a>
-            </div>
-          </div>
-
-          
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/Connexion" >Connexion</a>
-          </li>
-          <li class="nav-item">
-            <button type="button" class="btn btn-info">LogOut</button></li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        &nbsp;
-        <button type="button" class="btn btn-success" (click)="connexion()" >Connexion</button> &nbsp; 
-        <button type="button" class="btn btn-danger">LogOut</button>      
-      </div>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/Connexion">Connexion</a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-info">LogOut</button>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      &nbsp;
+      <button type="button" class="btn btn-success" (click)="connexion()">Connexion</button> &nbsp;
+      <button type="button" class="btn btn-danger">LogOut</button>
     </div>
-  </nav>
+  </div>
+</nav>

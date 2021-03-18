@@ -7,7 +7,7 @@ import {CatearticlesService} from '../services/catearticles.service';
   styleUrls: ['./pc-bureau.component.css']
 })
 export class PcBureauComponent implements OnInit {
-article: any=[];
+  articles: any=[];
   constructor(private pcbureau: CatearticlesService) { }
 
   ngOnInit(): void {
@@ -17,42 +17,9 @@ article: any=[];
   GetProduit(){
     this.pcbureau.getarticles(2).subscribe(
       (data) => {
-        this.article=data;
-        console.log(this.article);
+        this.articles=data;
+        console.log(this.articles);
       }
     );
   }
-
-  delPcBureau(id):void{
-    this.pcbureau.DeleteArticle(id)
-    .subscribe( data => {
-      alert("Pc bureau supprimé " + id + " supprimée");
-
-    },
-    (err)=>{
-    }
-    );
-  }
-  updatePcBureau(id,categorie):void{
-    this.pcbureau.putarticles(categorie)
-    .subscribe( data => {
-      alert("Pc bureau " + id + " modifié");
-
-    },
-    (err)=>{
-    }
-    );
-}
-addPcBureau(id,categorie):void{
-    this.pcbureau.postarticles(id)
-    .subscribe( data => {
-      alert("Pc bureau " + id + " ajouté");
-
-    },
-    (err)=>{
-    }
-    );
-  }
-
-
 }

@@ -1,13 +1,10 @@
-<div class="row">
-  <div *ngFor="let usb of articles" class="col-4 card">
-    <img class="card-img-top" src="{{usb.photo}}" alt="Card image cap">
+<div style="text-align: center" class="row">
+  <div *ngFor="let x of articles" class="col-3 card">
+    <img class="card-img-top" src="{{x.photo}}" alt="Card image cap" id="center">
     <div class="card-block">
-      <h5 class="card-title">{{usb.libelle}}</h5>
-      <p class="card-text">Prix : {{usb.prix}} €</p>
-      <p class="card-text">Marque : {{usb.marque}} </p>
-      <p class="card-text"> identifiant: {{usb.id}}</p>
-      <td><button class="btn btn-danger"> Acheter </button></td>
-
+      <h5 class="card-title">{{x.libelle}}</h5>
+      <p class="card-text">Prix : {{x.prix}} €</p>
+      <p class="card-text">Marque : {{x.marque}} </p>
     </div>
   </div>
 </div>

@@ -9,8 +9,4 @@ export class Articles {
     categorieArticle: categorieArticle = {
         id:""
     }
-        
-
-
-
-   }
+}

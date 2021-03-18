@@ -26,8 +26,8 @@ export class AjouterArticleComponent implements OnInit {
     console.log(this.articleInstance);
     this.article.postarticles(this.articleInstance)
     .subscribe( data => {
-      alert("article  créée");
-     // window.open("/app-missions","_self");
+      alert("Article créé !");
+      window.open("/listearticle","_self");
       this.articleInstance=data;
       console.log(this.articleInstance);
       return this.articleInstance;
@@ -38,7 +38,6 @@ export class AjouterArticleComponent implements OnInit {
  recupererCategorie(){
    this.article.getCategorie().subscribe(
      (data)=>{
-
       this.categorie=data
       console.log(this.categorie)
      }
