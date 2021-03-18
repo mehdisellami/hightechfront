@@ -7,7 +7,7 @@ import {CatearticlesService} from 'src/app/services/catearticles.service';
 })
 export class StockageAccessoiresComponent implements OnInit {
 
-  stockageAccessoire:any=[];
+  articles:any=[];
 
   constructor(private stockageServi:CatearticlesService) { }
 
@@ -19,8 +19,8 @@ export class StockageAccessoiresComponent implements OnInit {
   GetStockageAccesoires(){
     this.stockageServi.getarticles(9).subscribe(
       (data) =>{
-        this.stockageAccessoire=data;
-        console.log(this.stockageAccessoire);
+        this.articles=data;
+        console.log(data);
     }
     );
   }

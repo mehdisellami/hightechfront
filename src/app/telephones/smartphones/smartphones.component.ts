@@ -7,7 +7,7 @@ import { CatearticlesService } from 'src/app/services/catearticles.service';
   styleUrls: ['./smartphones.component.css']
 })
 export class SmartphonesComponent implements OnInit {
-  smartphones:any=[];
+  articles:any=[];
 
   constructor(private telServ:CatearticlesService) { }
 
@@ -18,21 +18,10 @@ export class SmartphonesComponent implements OnInit {
   getSmartphones(){
     this.telServ.getarticles(4).subscribe(
       (data) =>{
-        this.smartphones=data;
-        console.log(this.smartphones);
+        this.articles=data;
+        console.log(this.articles);
 
       }
     )
-  }
-
-  delSmartphones(id){
-    this.telServ.DeleteArticle(id)
-    .subscribe( data => {
-      alert("Pc supprimé " + id + " supprimée");
-    
-    },
-    (err)=>{
-    }
-    );  
   }
 }
