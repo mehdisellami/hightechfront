@@ -1,10 +1,10 @@
-<div class="row">
-  <div *ngFor="let smart of smartphones" class="col-4 card">
-    <img class="card-img-top" src="{{smart.photo}}" alt="Card image cap">
+<div style="text-align: center" class="row">
+  <div *ngFor="let x of articles" class="col-3 card">
+    <img class="card-img-top" src="{{x.photo}}" alt="Card image cap" id="center">
     <div class="card-block">
-      <h5 class="card-title">{{smart.libelle}}</h5>
-      <p class="card-text">Prix : {{smart.prix}} €</p>
-      <p class="card-text">Marque : {{smart.marque}} </p>
+      <h5 class="card-title">{{x.libelle}}</h5>
+      <p class="card-text">Prix : {{x.prix}} €</p>
+      <p class="card-text">Marque : {{x.marque}} </p>
     </div>
   </div>
 </div>

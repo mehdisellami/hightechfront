@@ -30,24 +30,23 @@ export class AjouterArticleComponent implements OnInit {
   btnadd(): void {
     console.log(this.articleInstance);
     this.article.postarticles(this.articleInstance)
-      .subscribe(data => {
-        alert("article  créée");
-        // window.open("/app-missions","_self");
-        this.articleInstance = data;
-        console.log(this.articleInstance);
-        return this.articleInstance;
-      },
-        (err) => { });
-  }
+    .subscribe( data => {
+      alert("Article créé !");
+      window.open("/listearticle","_self");
+      this.articleInstance=data;
+      console.log(this.articleInstance);
+      return this.articleInstance;
+    },
+    (err)=>{});  
+ }
 
-  recupererCategorie() {
-    this.article.getCategorie().subscribe(
-      (data) => {
-
-        this.categorie = data
-        console.log(this.categorie)
-      }
-    )
-  }
+ recupererCategorie(){
+   this.article.getCategorie().subscribe(
+     (data)=>{
+      this.categorie=data
+      console.log(this.categorie)
+     }
+   )
+ }
 
 }

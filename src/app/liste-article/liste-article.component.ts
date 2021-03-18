@@ -23,12 +23,11 @@ articles: any=[];
      );
    }
 
-
   delArticle(id):void{
     this.article.DeleteArticle(id)
     .subscribe( data => {
-      alert("Article supprimé " + id + " supprimée");
-
+      alert("Article " + id + " supprimée");
+      window.open("/listearticle","_self");
     },
     (err)=>{
     }
@@ -38,6 +37,5 @@ articles: any=[];
   editArticle(id):void{
   window.open("/editarticle/"+id,"_self");
   }
- 
 
 }

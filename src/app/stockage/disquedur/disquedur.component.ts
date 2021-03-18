@@ -7,21 +7,20 @@ import { CatearticlesService } from 'src/app/services/catearticles.service';
   styleUrls: ['./disquedur.component.css']
 })
 export class DisquedurComponent implements OnInit {
-    disquedur: any=[];
-    constructor(private disquedurServ: CatearticlesService) { }
+  articles: any=[];
+  constructor(private disquedurServ: CatearticlesService) { }
   
-    ngOnInit(): void {
-      this.GetProduit();
-    }
+  ngOnInit(): void {
+    this.GetProduit();
+  }
   
-    GetProduit(){
-      this.disquedurServ.getarticles(7).subscribe(
-        (data) => {
-          this.disquedur=data;
+  GetProduit(){
+    this.disquedurServ.getarticles(7).subscribe(
+      (data) => {
+        this.articles=data;
         console.log(data);  
-    }
-      );
-  
+      }
+    );
   }
   
 }

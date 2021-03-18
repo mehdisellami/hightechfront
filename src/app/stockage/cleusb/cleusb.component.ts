@@ -7,7 +7,6 @@ import { CatearticlesService } from 'src/app/services/catearticles.service';
 })
 export class CleusbComponent implements OnInit {
   articles: any=[];
-  usb: any=[];
   constructor(private produit: CatearticlesService) { }
 
   ngOnInit(): void {
@@ -18,16 +17,8 @@ export class CleusbComponent implements OnInit {
     this.produit.getarticles(8).subscribe(
       (data) => {
         this.articles=data;
-      console.log(data);  
-  }
+        console.log(data);  
+      }
     );
-
-}
-panier():any{
-  window.open("panier","_self");
-
-}
-
-
-
+  }
 }

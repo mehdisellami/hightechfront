@@ -12,12 +12,14 @@ export class EditarticleComponent implements OnInit {
   
 idarticle: any;
 articlerecup: any;
+categorie:any=[];
 
-  constructor(private article: CatearticlesService, private route: ActivatedRoute) { }
+constructor(private article: CatearticlesService, private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
+ngOnInit(): void {
   this.idarticle=this.route.snapshot.paramMap.get('id');
   this.recupArticles(this.idarticle);
+  this.recupererCategorie();
 }
 
 recupArticles(id){
@@ -35,10 +37,20 @@ EditArticle()
     (data)=>{
       const type = 'success';
       alert("Modification effectuée !");
+      window.open("/listearticle","_self");
     return data;
   },
-  (err)=>{alert("ERROR " + this.articlerecup.id + " " + this.articlerecup.libelle + " " + this.articlerecup.marque + " " + this.articlerecup.prix + " " + this.articlerecup.photo);}
+  (err)=>{alert("ERROR");}
   );
+}
+
+recupererCategorie(){
+  this.article.getCategorie().subscribe(
+    (data)=>{
+     this.categorie=data
+     console.log(this.categorie)
+    }
+  )
 }
 
 }
