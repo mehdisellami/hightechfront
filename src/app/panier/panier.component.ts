@@ -9,7 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PanierComponent implements OnInit {
   idarticle: any;
-  articlerecup: any;
+  tableauprovisioire:any=[]
+   articlerecup: any;
   constructor(private article : CatearticlesService, private route: ActivatedRoute) { }
   ngOnInit(): void {
     this.idarticle=this.route.snapshot.paramMap.get('id');
@@ -24,6 +25,8 @@ export class PanierComponent implements OnInit {
     this.article.RecupArticles(id).subscribe(
       (data) => {
         this.articlerecup=data;
+        this.tableauprovisioire.push(this.articlerecup);
+        console.log(this.tableauprovisioire)
         console.log(this.article);
       },
     );
