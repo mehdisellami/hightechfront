@@ -8,6 +8,7 @@ import { CatearticlesService } from 'src/app/services/catearticles.service';
 })
 export class SmartphonesComponent implements OnInit {
   articles:any=[];
+  articlesparID:any=[];
 
   constructor(private telServ:CatearticlesService) { }
 
@@ -23,5 +24,20 @@ export class SmartphonesComponent implements OnInit {
 
       }
     )
+  }
+
+  getArticleParID(idArticle){
+    this.telServ.getArticleByID(idArticle).subscribe(
+      (data) =>{
+        this.articlesparID=data;
+        window.open("/articles/"+idArticle,"_self");
+        console.log(this.articlesparID);
+      }
+    )
+  }
+
+  panier(id):void{
+    window.open("/panier/"+id,"_self");
+  
   }
 }

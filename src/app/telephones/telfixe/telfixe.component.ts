@@ -8,6 +8,7 @@ import {CatearticlesService} from 'src/app/services/catearticles.service';
 export class TelfixeComponent implements OnInit {
 
   articles: any=[];
+  articlesparID:any=[];
   constructor(private telfixe: CatearticlesService) { }
 
   ngOnInit(): void {
@@ -21,6 +22,21 @@ export class TelfixeComponent implements OnInit {
       console.log(data);  
   }
     );
+
+}
+
+getArticleParID(idArticle){
+  this.telfixe.getArticleByID(idArticle).subscribe(
+    (data) =>{
+      this.articlesparID=data;
+      window.open("/articles/"+idArticle,"_self");
+      console.log(this.articlesparID);
+    }
+  )
+}
+
+panier(id):void{
+  window.open("/panier/"+id,"_self");
 
 }
 }

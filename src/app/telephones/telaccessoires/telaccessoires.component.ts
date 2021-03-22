@@ -9,6 +9,7 @@ import {CatearticlesService} from 'src/app/services/catearticles.service';
 export class TelaccessoiresComponent implements OnInit {
 
   articles: any=[];
+  articlesparID:any=[];
   constructor(private telaccessoires: CatearticlesService) { }
 
   ngOnInit(): void {
@@ -25,5 +26,19 @@ export class TelaccessoiresComponent implements OnInit {
 
 }
 
+getArticleParID(idArticle){
+  this.telaccessoires.getArticleByID(idArticle).subscribe(
+    (data) =>{
+      this.articlesparID=data;
+      window.open("/articles/"+idArticle,"_self");
+      console.log(this.articlesparID);
+    }
+  )
+}
+
+panier(id):void{
+  window.open("/panier/"+id,"_self");
+
+}
 
 }

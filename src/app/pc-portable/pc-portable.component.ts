@@ -29,7 +29,6 @@ export class PcPortableComponent implements OnInit {
   
   }
 
-
   getArticleParID(idArticle){
     this.pcportable.getArticleByID(idArticle).subscribe(
       (data) =>{
