@@ -9,6 +9,7 @@ import { CatearticlesService } from '../services/catearticles.service';
 export class PcAccessoiresComponent implements OnInit {
 
   articles: any=[];
+  articlesparID:any=[];
   constructor(private pcaccessoires: CatearticlesService) { }
 
   ngOnInit(): void {
@@ -28,6 +29,16 @@ export class PcAccessoiresComponent implements OnInit {
 panier(id):void{
   window.open("/panier/"+id,"_self");
 
+}
+
+getArticleParID(idArticle){
+  this.pcaccessoires.getArticleByID(idArticle).subscribe(
+    (data) =>{
+      this.articlesparID=data;
+      window.open("/articles/"+idArticle,"_self");
+      console.log(this.articlesparID);
+    }
+  )
 }
 
 }

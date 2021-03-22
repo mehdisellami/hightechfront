@@ -8,6 +8,7 @@ import {CatearticlesService} from '../services/catearticles.service';
 })
 export class PcBureauComponent implements OnInit {
   articles: any=[];
+  articlesparID:any=[];
   constructor(private pcbureau: CatearticlesService) { }
 
   ngOnInit(): void {
@@ -25,5 +26,15 @@ export class PcBureauComponent implements OnInit {
   panier(id):void{
     window.open("/panier/"+id,"_self");
   
+  }
+
+  getArticleParID(idArticle){
+    this.pcbureau.getArticleByID(idArticle).subscribe(
+      (data) =>{
+        this.articlesparID=data;
+        window.open("/articles/"+idArticle,"_self");
+        console.log(this.articlesparID);
+      }
+    )
   }
 }
