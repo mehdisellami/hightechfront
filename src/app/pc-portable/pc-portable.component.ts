@@ -36,6 +36,7 @@ export class PcPortableComponent implements OnInit {
         this.articlesparID=data;
         window.open("/articles/"+idArticle,"_self");
         console.log(this.articlesparID);
+
       }
     )
   }

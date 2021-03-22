@@ -29,6 +29,7 @@ import { EditarticleComponent } from './editarticle/editarticle.component';
 import { AuthontificationGuardGuard } from './guards/authontification-guard.guard';
 import { LoginService } from './services/login.service';
 import { ArticleComponent } from './article/article.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { ArticleComponent } from './article/article.component';
     AjouterArticleComponent,
     ListeArticleComponent,
     EditarticleComponent,
-    ArticleComponent
+    ArticleComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
