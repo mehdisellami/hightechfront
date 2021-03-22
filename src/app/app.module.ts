@@ -28,6 +28,7 @@ import {ListeArticleComponent} from './liste-article/liste-article.component';
 import { EditarticleComponent } from './editarticle/editarticle.component';
 import { AuthontificationGuardGuard } from './guards/authontification-guard.guard';
 import { LoginService } from './services/login.service';
+import { ArticleComponent } from './article/article.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { LoginService } from './services/login.service';
     StockageAccessoiresComponent,
     AjouterArticleComponent,
     ListeArticleComponent,
-    EditarticleComponent
+    EditarticleComponent,
+    ArticleComponent
   ],
   imports: [
     CommonModule,

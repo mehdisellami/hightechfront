@@ -1,0 +1,20 @@
+
+<div class="img">
+    <img class="card-img-top" src="{{articlerecup.photo}}"  alt="Card image cap" id="center">
+</div>
+  
+
+
+  <div class="card">
+    <div class="card-header">
+        {{articlerecup.libelle}}
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+     
+        <p class="card-text">Marque : {{articlerecup.marque}}</p>
+        <p class="card-text">Catégorie : {{articlerecup?.categorieArticle?.libelleArticle}}</p>
+        <footer class="blockquote-footer">Prix : {{articlerecup.prix}} €</footer>
+      </blockquote>
+    </div>
+  </div>

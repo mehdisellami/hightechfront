@@ -8,6 +8,7 @@ import { CatearticlesService } from '../services/catearticles.service';
 })
 export class PcPortableComponent implements OnInit {
   articles : any =[];
+  articlesparID:any=[];
 
   constructor(public pcportable : CatearticlesService) { }
 
@@ -26,6 +27,17 @@ export class PcPortableComponent implements OnInit {
   panier(id):void{
     window.open("/panier/"+id,"_self");
   
+  }
+
+
+  getArticleParID(idArticle){
+    this.pcportable.getArticleByID(idArticle).subscribe(
+      (data) =>{
+        this.articlesparID=data;
+        window.open("/articles/"+idArticle,"_self");
+        console.log(this.articlesparID);
+      }
+    )
   }
 
 }

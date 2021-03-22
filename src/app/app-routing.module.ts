@@ -19,9 +19,11 @@ import { AjouterArticleComponent } from './ajouter-article/ajouter-article.compo
 import { ListeArticleComponent, } from './liste-article/liste-article.component';
 import { EditarticleComponent } from './editarticle/editarticle.component';
 import { AuthontificationGuardGuard } from './guards/authontification-guard.guard';
+import { ArticleComponent } from './article/article.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent , canActivate: [AuthontificationGuardGuard]  },
+{ path: 'articles/:id', component: ArticleComponent , canActivate: [AuthontificationGuardGuard]  },
 { path: 'PcPortable', component: PcPortableComponent  , canActivate: [AuthontificationGuardGuard] },
 { path: 'pcburreau', component: PcBureauComponent  , canActivate: [AuthontificationGuardGuard]},
 { path: 'panier/:id', component: PanierComponent  , canActivate: [AuthontificationGuardGuard] },

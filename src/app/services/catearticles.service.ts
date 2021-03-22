@@ -16,6 +16,10 @@ export class CatearticlesService {
     return this.http.get<Object>("http://localhost:8080/Hightech/hightech/listearticle/articlebycategorie/" + categorieID);
   }
 
+  getArticleByID(IDarticle){
+    return this.http.get<object>("http://localhost:8080/Hightech/hightech/listearticle/"+IDarticle);
+  }
+
   getAllarticles() {
     return this.http.get<object>("http://localhost:8080/Hightech/hightech/listearticle");
 
