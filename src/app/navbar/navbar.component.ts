@@ -38,7 +38,7 @@ export class NavbarComponent implements OnInit {
   logOut(){
     window.localStorage.clear();
     this.isLoggedIn=false;
-    alert("Deconnecté !!!!");
+    alert("Utilisateur deconnecté");
     this.route.navigate(['/Connexion'])
 
   }

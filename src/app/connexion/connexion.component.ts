@@ -22,7 +22,7 @@ export class ConnexionComponent implements OnInit {
 
     this.connectService.ConnectAdmin(this.admin).subscribe(
       data => {
-        alert("utilisateut authentifié !");
+        alert("utilisateur connecté avec success !");
         this.admin = data;
       localStorage.setItem('username',this.admin[0]?.username)
       this.isLoggedin=true;
