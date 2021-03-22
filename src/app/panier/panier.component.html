@@ -26,14 +26,14 @@
         </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr >
                 <td>{{ articlerecup?.id}}</td>
                 <td>{{ articlerecup?.libelle}}</td>
                 <td>{{ articlerecup?.marque}}</td>
                 <td>{{ articlerecup?.prix}}</td>
                 <td> <img class="card-img-top" src="{{articlerecup?.photo}}" alt="Card image cap"> </td>
-                <td>{{ articlerecup?.boutique}}</td>
-                <td>{{ articlerecup?.categorie}}</td>
+                <td>{{ articlerecup?.boutiqueArticle?.nomBoutique}}</td>
+                <td>{{ articlerecup?.categorieArticle?.libelleArticle}}</td>
             </tr>
         </tbody>
 
