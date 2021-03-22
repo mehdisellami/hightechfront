@@ -8,6 +8,7 @@ import {CatearticlesService} from 'src/app/services/catearticles.service';
 export class StockageAccessoiresComponent implements OnInit {
 
   articles:any=[];
+  articlesparID:any=[];
 
   constructor(private stockageServi:CatearticlesService) { }
 
@@ -27,5 +28,15 @@ export class StockageAccessoiresComponent implements OnInit {
   panier(id):void{
     window.open("/panier/"+id,"_self");
   
+  }
+
+  getArticleParID(idArticle){
+    this.stockageServi.getArticleByID(idArticle).subscribe(
+      (data) =>{
+        this.articlesparID=data;
+        window.open("/articles/"+idArticle,"_self");
+        console.log(this.articlesparID);
+      }
+    )
   }
 }

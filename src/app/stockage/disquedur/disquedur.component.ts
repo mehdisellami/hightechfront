@@ -8,6 +8,7 @@ import { CatearticlesService } from 'src/app/services/catearticles.service';
 })
 export class DisquedurComponent implements OnInit {
   articles: any=[];
+  articlesparID: any=[];
   constructor(private disquedurServ: CatearticlesService) { }
   
   ngOnInit(): void {
@@ -25,6 +26,16 @@ export class DisquedurComponent implements OnInit {
   panier(id):void{
     window.open("/panier/"+id,"_self");
   
+  }
+
+  getArticleParID(idArticle){
+    this.disquedurServ.getArticleByID(idArticle).subscribe(
+      (data) =>{
+        this.articlesparID=data;
+        window.open("/articles/"+idArticle,"_self");
+        console.log(this.articlesparID);
+      }
+    )
   }
   
 }

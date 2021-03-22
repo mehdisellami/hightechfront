@@ -7,6 +7,7 @@ import { CatearticlesService } from 'src/app/services/catearticles.service';
 })
 export class CleusbComponent implements OnInit {
   articles: any=[];
+  articlesparID: any=[];
   constructor(private produit: CatearticlesService) { }
 
   ngOnInit(): void {
@@ -25,6 +26,16 @@ export class CleusbComponent implements OnInit {
 panier(id):void{
   window.open("/panier/"+id,"_self");
 
+}
+
+getArticleParID(idArticle){
+  this.produit.getArticleByID(idArticle).subscribe(
+    (data) =>{
+      this.articlesparID=data;
+      window.open("/articles/"+idArticle,"_self");
+      console.log(this.articlesparID);
+    }
+  )
 }
 
 
