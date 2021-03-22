@@ -24,3 +24,17 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+
+  <div class="card">
+    <div class="card-header">
+        {{this.tabBoutique[0]?.nomBoutique}}
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+     
+        <p class="card-text">Adresse : {{this.tabBoutique[0]?.adresse}}</p>
+        <p class="card-text">Mail : {{this.tabBoutique[0]?.adresseMail}}</p>
+        <footer class="blockquote-footer">tel : {{this.tabBoutique[0]?.tel}} </footer>
+      </blockquote>
+    </div>
+  </div>
